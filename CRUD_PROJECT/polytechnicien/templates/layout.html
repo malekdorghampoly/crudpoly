@@ -1,0 +1,77 @@
+{# templates/layout.html #}
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<title>Django Polytec App - {% block title %}{% endblock title %}</title>
+<style type="text/CSS">
+.fa-facebook-f:before{content:"\f39e"}
+.fa-facebook:before{content:"\f09a"}
+.fa-facebook-messenger:before{content:"\f39f"}
+.fa-facebook-square:before{content:"\f082"}
+.fa-twitch:before{content:"\f1e8"}
+.fa-twitter:before{content:"\f099"}
+.fa-twitter-square:before{content:"\f081"}
+.fa-linkedin:before{content:"\f08c"}
+.fa-linkedin-in:before{content:"\f0e1"}
+.bg-blue{--bg-opacity:1;background-color: #B0C4DE ;}
+.px-2{padding-left:.5rem;padding-right:.5rem}
+.px-8{padding-left:2rem;padding-right:2rem}
+.text-center{color:#edf2f7;font-size:2.25rem ; font-weight:700;text-align:center}
+.bg-green{background-color:#B0C4DE;}
+.mt-3{margin-top:.75rem}
+.ml-3{margin-left:.75rem}
+.flex{display:flex}
+.inline-flex{display:inline-flex}
+.flex-row{flex-direction:row}
+.flex-row-reverse{flex-direction:row-reverse}
+.flex-col{flex-direction:column}
+.flex-col-reverse{flex-direction:column-reverse}
+.flex-wrap{flex-wrap:wrap}
+.flex-wrap-reverse{flex-wrap:wrap-reverse}
+.flex-no-wrap{flex-wrap:nowrap}
+.justify-center{justify-content:center}
+.mt-4{margin-top:1rem}
+.mx-1{margin-left:.25rem;margin-right:.25rem}
+.cursor-pointer{cursor:pointer}
+.w-full{width:30%}
+.justify-between{justify-content:space-between}
+.-mx-1{margin-left:-.25rem;margin-right:-.25rem}
+.m-auto{margin:auto}
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Nunito';
+}
+.member-card {
+width: 250px;
+margin: 1rem;
+}
+form.join-form {
+max-width: 500px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>*******Page header******</h1>
+</header>
+{% block content %}{% endblock content %}
+<footer>
+<h1>*********Page footer*******</h1>
+<img src="https://www.polytecsousse.tn/wp-content/uploads/2020/09/cropped-logo-
+polytech.png" />
+</footer>
+</body>
+</html>
