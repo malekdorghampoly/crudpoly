@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from . import views
 
 urlpatterns = [
@@ -11,4 +12,5 @@ urlpatterns = [
     path('update/upmen/<int:id>', views.upmen, name='upmen'),
     path('api/student/', views.StudentView.as_view()),
     path('api/student/<str:id>', views.StudentView.as_view()),
+    
 ]
