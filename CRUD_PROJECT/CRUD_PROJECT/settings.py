@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polytechnicien',
     'rest_framework',
     'corsheaders',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'CRUD_PROJECT.wsgi.application'
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
